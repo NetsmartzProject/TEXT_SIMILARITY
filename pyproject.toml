@@ -1,15 +1,16 @@
-[project]
+[tool.poetry]
 name = "TASK_SIMILARITY"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "NetsmartzProject",email = "vickykr1703@gmail.com"}
-]
+description = "Text similarity project using Sentence Transformers"
+authors = ["NetsmartzProject <vickykr1703@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-]
+packages = [{include = "app"}]
 
+[tool.poetry.dependencies]
+python = ">=3.12"
+sentence-transformers = "^2.2.2"
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
